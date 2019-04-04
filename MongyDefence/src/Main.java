@@ -1,3 +1,11 @@
+/*
+ * Authors: Ethan Ling
+ * 			Kevin Chu
+ * 
+ * Date: 
+ * 
+ */
+
 
 import java.awt.*;
 import javax.swing.*;
