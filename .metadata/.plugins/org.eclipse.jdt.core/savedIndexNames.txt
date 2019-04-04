@@ -1,3 +1,0 @@
-INDEX VERSION 1.131+/Users/ethan/Documents/GitHub/Capstone-Project-2019/.metadata/.plugins/org.eclipse.jdt.core
-1897881457.index
-1828089775.index
