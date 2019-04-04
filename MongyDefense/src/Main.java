@@ -1,10 +1,3 @@
-/*
- * Authors: Kevin Chu and Ethan Ling
- * Date: 4/3/2019
- * Period: 4
- * Project: Capstone Project
- */
-
 import java.awt.*;
 import javax.swing.*;
 
