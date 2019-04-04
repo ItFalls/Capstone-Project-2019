@@ -1,9 +1,8 @@
 /*
- * Authors: Ethan Ling
- * 			Kevin Chu
- * 
- * Date: 
- * 
+ * Authors: Ethan Ling, Kevin Chu
+ * Period: 4
+ * Date: 4/3/2019
+ * Capstone Project
  */
 
 
