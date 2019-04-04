@@ -42,5 +42,4 @@ public class Main extends JPanel {
 		
 		window.setVisible(true);
 	}
-	
 }
