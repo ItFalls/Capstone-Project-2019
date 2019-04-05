@@ -2,7 +2,7 @@
 # Edit at https://www.gitignore.io/?templates=java,macos,eclipse
 
 ### Eclipse ###
-.metadata
+.metadata/
 bin/
 tmp/
 *.tmp
