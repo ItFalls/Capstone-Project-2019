@@ -32,8 +32,7 @@ public class Player {
 		if (xMovement < 0 && flipped == false) {
 			this.flip();
 			flipped = true;
-		}
-		else if (xMovement > 0 && flipped == true) {
+		} else if (xMovement > 0 && flipped == true) {
 			this.flip();
 			flipped = false;
 		}
@@ -42,39 +41,41 @@ public class Player {
 	}
 
 	public void draw(Graphics g) {
-		((Graphics2D) g).drawImage(mongy, xPos, yPos, 50, 50, null);
+		((Graphics2D) g).drawImage(mongy, xPos, yPos, 70, 70, null);
 	}
 
 	public void keyPressed(KeyEvent e) {
 
 		int key = e.getKeyCode();
+		int speed = 8;
 
-		if (key == KeyEvent.VK_LEFT) {
-			xMovement = -5;
+		if (key == KeyEvent.VK_A) {
+			xMovement = -speed;
 		}
 
-		if (key == KeyEvent.VK_RIGHT) {
-			xMovement = 5;
+		if (key == KeyEvent.VK_D) {
+			xMovement = speed;
 		}
 
-		if (key == KeyEvent.VK_UP) {
-			yMovement = -5;
+		if (key == KeyEvent.VK_W) {
+			yMovement = -speed;
 		}
 
-		if (key == KeyEvent.VK_DOWN) {
-			yMovement = 5;
+		if (key == KeyEvent.VK_S) {
+			yMovement = speed;
 		}
+
 	}
 
 	public void keyReleased(KeyEvent e) {
-		
+
 		int key = e.getKeyCode();
 
-		if (key == KeyEvent.VK_LEFT || key == KeyEvent.VK_RIGHT) {
+		if (key == KeyEvent.VK_A || key == KeyEvent.VK_D) {
 			xMovement = 0;
 		}
 
-		if (key == KeyEvent.VK_UP || key == KeyEvent.VK_DOWN) {
+		if (key == KeyEvent.VK_W || key == KeyEvent.VK_S) {
 			yMovement = 0;
 		}
 	}
