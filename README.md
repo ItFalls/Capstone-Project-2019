@@ -23,8 +23,18 @@
 # Class List
 
     Main
-    Mongy
+    Player
     Banana
     Coconut
     Poop
     
+# Responsibilities
+
+    Ethan   . 
+            .
+            .
+            
+    Kevin   .
+            .
+            .
+            .
