@@ -24,17 +24,20 @@
 
     Main
     Player
+    Enemy
     Banana
     Coconut
     Poop
     
 # Responsibilities
 
-    Ethan   . 
-            .
-            .
+    Ethan   . Weapon
+            . Banana
+            . Coconut
+            . Poop
+            . README
+            . UML Diagram
             
-    Kevin   .
-            .
-            .
-            .
+    Kevin   . Player
+            . Enemy
+            . Main
