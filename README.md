@@ -1,7 +1,7 @@
 # Mongy Defense
 
     Authors: Ethan Ling
-               Kevin Chu
+             Kevin Chu
 
 # Introduction
 
