@@ -25,6 +25,7 @@
     Main
     Player
     Enemy
+    Weapon
     Banana
     Coconut
     Poop

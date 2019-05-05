@@ -13,6 +13,8 @@ public class Banana{
 	int damage;
 	int direction;
 	private BufferedImage banana;
+	private int xPos;
+	private int yPos;
 
 	public Banana(int xPos, int yPos) {
 		try {

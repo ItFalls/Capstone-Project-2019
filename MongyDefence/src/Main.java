@@ -40,6 +40,9 @@ public class Main extends JPanel implements KeyListener{
 		mongy.draw(g);
 	}
 	
+	public void setIconImage(Image image) {
+	}
+	
 	@Override
 	public void keyPressed(KeyEvent e) {
 		mongy.keyPressed(e);
@@ -55,6 +58,7 @@ public class Main extends JPanel implements KeyListener{
 	}
 
 	public static void main(String[] args) {
+
 		JFrame window = new JFrame("MongyDefense");
 
 		window.setBounds(300, 300, 800, 600);

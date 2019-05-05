@@ -5865,3 +5865,50 @@ java.lang.NoClassDefFoundError: javax/xml/bind/JAXBContext
 	at org.eclipse.recommenders.news.impl.poll.DefaultNewsPollingService.poll(DefaultNewsPollingService.java:64)
 	at org.eclipse.recommenders.internal.news.rcp.poll.PollFeedsJob.run(PollFeedsJob.java:70)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2019-05-01 18:20:01.300 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/ethan/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/ethan/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2019-05-01 18:20:16.896
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2019-05-02 20:13:37.034 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/ethan/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/ethan/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2019-05-02 20:13:40.603
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.oomph.setup.core 2 0 2019-05-02 20:13:52.862
+!MESSAGE The Eclipse Git-hosted URI 'http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/org.eclipse.setup' is blocked for direct access.
+Please open a Bugzilla to add it to an official Oomph catalog.
+For initial testing, use the file system local version of the resource.
+Alternatively, run the setup archiver application as follows:
+  /Users/ethan/eclipse/java-2018-12/Eclipse.app/Contents/MacOS/eclipse -application org.eclipse.oomph.setup.core.SetupArchiver -consoleLog -noSplash -uris http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/org.eclipse.setup
+!SESSION 2019-05-04 15:10:52.417 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -keyring /Users/ethan/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -data /Users/ethan/Documents/GitHub/Capstone-Project-2019 -product org.eclipse.epp.package.java.product -keyring /Users/ethan/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2019-05-04 15:10:55.104
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2019-05-05 12:24:48.923 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/ethan/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/ethan/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2019-05-05 12:24:53.740
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
