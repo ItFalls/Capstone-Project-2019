@@ -5,76 +5,75 @@
  * Capstone Project
  */
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-import javax.swing.*;
+public class Main extends JPanel implements KeyListener {
+    private final Font FONT = new Font("ComicSans", Font.PLAIN, 20);
+    private Player mongy;
 
-public class Main extends JPanel implements KeyListener{
-	private final Font FONT = new Font("ComicSans", Font.PLAIN, 20);
-	private Player mongy;
+    public Main() {
+        this.setFocusable(true);
+        addKeyListener(this);
+        mongy = new Player(getWidth() / 2, getHeight() / 2);
 
-	public Main() {
-		this.setFocusable(true);
-		addKeyListener(this);
-		mongy = new Player(getWidth() / 2, getHeight() / 2);
-		
-	}
+    }
 
-	public void paintComponent(Graphics g) {
-		super.paintComponent(g);
+    public static void main(String[] args) {
 
-		g.setColor(Color.GREEN);
+        JFrame window = new JFrame("MongyDefense");
 
-		g.fillRect(0, 0, getWidth(), 5 * getHeight() / 8);
+        window.setBounds(300, 300, 800, 600);
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		g.setColor(Color.BLACK);
+        Main panel = new Main();
+        panel.setBackground(Color.PINK);
+        Container c = window.getContentPane();
+        c.add(panel);
 
-		g.setFont(FONT);
+        window.setVisible(true);
+    }
 
-		g.drawString("Power Ups", getWidth() / 2 - 30, 11 * getHeight() / 16);
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
 
-		g.drawLine(0, 23 * getHeight() / 32, getWidth(), 23 * getHeight() / 32);
-		
-		mongy.draw(g);
-	}
-	
-	public void setIconImage(Image image) {
-	}
-	
-	@Override
-	public void keyPressed(KeyEvent e) {
-		mongy.keyPressed(e);
-		mongy.move();
-		repaint();
-	}
+        g.setColor(Color.GREEN);
 
-	@Override
-	public void keyReleased(KeyEvent e) {
-		mongy.keyReleased(e);
-		mongy.move();
-		repaint();
-	}
+        g.fillRect(0, 0, getWidth(), 5 * getHeight() / 8);
 
-	public static void main(String[] args) {
+        g.setColor(Color.BLACK);
 
-		JFrame window = new JFrame("MongyDefense");
+        g.setFont(FONT);
 
-		window.setBounds(300, 300, 800, 600);
-		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
-		Main panel = new Main();
-		panel.setBackground(Color.PINK);
-		Container c = window.getContentPane();
-		c.add(panel);
+        g.drawString("Power Ups", getWidth() / 2 - 30, 11 * getHeight() / 16);
 
-		window.setVisible(true);
-	}
+        g.drawLine(0, 23 * getHeight() / 32, getWidth(), 23 * getHeight() / 32);
 
-	@Override
-	public void keyTyped(KeyEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
+        mongy.draw(g);
+    }
+
+    public void setIconImage(Image image) {
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        mongy.keyPressed(e);
+        mongy.move();
+        repaint();
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+        mongy.keyReleased(e);
+        mongy.move();
+        repaint();
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+        // TODO Auto-generated method stub
+
+    }
 }
