@@ -1,79 +1,151 @@
 /*
- * Authors: Ethan Ling and Kevin Chu
+ * Authors: Ethan Ling, Kevin Chu
  * Period: 4
  * Date: 4/3/2019
  * Capstone Project
  */
 
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+import javax.swing.*;
+
 public class Main extends JPanel implements KeyListener {
-    private final Font FONT = new Font("ComicSans", Font.PLAIN, 20);
-    private Player mongy;
+	public static final int DRAWING_WIDTH = 763;
+	public static final int DRAWING_HEIGHT = 403;
+	private final Font FONT = new Font("ComicSans", Font.PLAIN, 20);
+	private Player mongy;
+	private boolean upKeyPressed,downKeyPressed,leftKeyPressed,rightKeyPressed;
 
-    public Main() {
-        this.setFocusable(true);
-        addKeyListener(this);
-        mongy = new Player(getWidth() / 2, getHeight() / 2);
+	public Main() {
+		this.setFocusable(true);
+		addKeyListener(this);
+		mongy = new Player(360, 200);
+		
+	}
 
-    }
+	public void paintComponent(Graphics g) {
+		super.paintComponent(g);
 
-    public static void main(String[] args) {
+		g.setColor(Color.GREEN);
 
-        JFrame window = new JFrame("MongyDefense");
+		g.fillRect(0, 0, getWidth(), 3 * getHeight() / 4);
 
-        window.setBounds(300, 300, 800, 600);
-        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		g.setColor(Color.BLACK);
 
-        Main panel = new Main();
-        panel.setBackground(Color.PINK);
-        Container c = window.getContentPane();
-        c.add(panel);
+		g.setFont(FONT);
 
-        window.setVisible(true);
-    }
+		g.drawString("Power Ups", getWidth() / 2 - 30, 13 * getHeight() / 16);
 
-    public void paintComponent(Graphics g) {
-        super.paintComponent(g);
+		g.drawLine(0, 27 * getHeight() / 32, getWidth(), 27 * getHeight() / 32);
+		
+		mongy.draw(g,this);
+	}
+	
+	@Override
+	public void keyPressed(KeyEvent e) {
 
-        g.setColor(Color.GREEN);
+		int key = e.getKeyCode();
 
-        g.fillRect(0, 0, getWidth(), 5 * getHeight() / 8);
+		if (key == KeyEvent.VK_A) {
+			leftKeyPressed = true;
+		}
 
-        g.setColor(Color.BLACK);
+		if (key == KeyEvent.VK_D) {
+			rightKeyPressed = true;
+		}
 
-        g.setFont(FONT);
+		if (key == KeyEvent.VK_W) {
+			upKeyPressed = true;
+		}
 
-        g.drawString("Power Ups", getWidth() / 2 - 30, 11 * getHeight() / 16);
+		if (key == KeyEvent.VK_S) {
+			downKeyPressed = true;
+		}
+	}
 
-        g.drawLine(0, 23 * getHeight() / 32, getWidth(), 23 * getHeight() / 32);
+	@Override
+	public void keyReleased(KeyEvent e) {
+		
+		int key = e.getKeyCode();
 
-        mongy.draw(g);
-    }
+		if (key == KeyEvent.VK_A) {
+			leftKeyPressed = false;
+		}
 
-    public void setIconImage(Image image) {
-    }
+		if (key == KeyEvent.VK_D) {
+			rightKeyPressed = false;
+		}
 
-    @Override
-    public void keyPressed(KeyEvent e) {
-        mongy.keyPressed(e);
-        mongy.move();
-        repaint();
-    }
+		if (key == KeyEvent.VK_W) {
+			upKeyPressed = false;
+		}
 
-    @Override
-    public void keyReleased(KeyEvent e) {
-        mongy.keyReleased(e);
-        mongy.move();
-        repaint();
-    }
+		if (key == KeyEvent.VK_S) {
+			downKeyPressed = false;
+		}
+	}
+	
+	public void run() {
+	  	while(true) {
+	  		// MAKE A CHANGE
+	  		if (leftKeyPressed) {
+	  			mongy.walkX(-1);
+	  	  	} 
+	  		if (rightKeyPressed) {
+	  			mongy.walkX(1);
+	  	  	} 
+	  		if (upKeyPressed) {
+	  			mongy.walkY(-1);
+	  	  	} 
+	  		if (downKeyPressed) {
+	  	  		mongy.walkY(1);
+	  	  	}
+	  		
+	  		mongy.update();
+	  		checkPlayer();
+	  		// SHOW THE CHANGE
+	  		repaint();
+	  		
+	  		
+	  		// WAIT
+	  		try {
+				Thread.sleep(20);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	  		
+	  	}
+	}
+	
+	public void checkPlayer() {
+	  	int x = mongy.getX() + mongy.getWidth()/2;
+	  	int y = mongy.getY() + mongy.getHeight()/2;
+	  	if (x < 0 || x > DRAWING_WIDTH || y < 0 || y > DRAWING_HEIGHT)
+	  		mongy = new Player(360, 200);
+	  }
 
-    @Override
-    public void keyTyped(KeyEvent e) {
-        // TODO Auto-generated method stub
+	public static void main(String[] args) {
+		JFrame window = new JFrame("MongyDefense");
 
-    }
+		window.setBounds(300, 100, 800, 600);
+		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		Main panel = new Main();
+		panel.setBackground(Color.PINK);
+		Container c = window.getContentPane();
+		c.add(panel);
+
+		window.setVisible(true);
+		
+		panel.run();
+	}
+
+	@Override
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
 }
