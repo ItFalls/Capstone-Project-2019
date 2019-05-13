@@ -2,8 +2,8 @@ public class Weapon extends MovingImage {
 	private int damage, speed;
 	private double xMovement, yMovement;
 	
-	public Weapon(String imagePath, int damage, int size, int speed, int xPos, int yPos) {
-		super(imagePath, xPos, yPos, 10, 10);
+	public Weapon(String imagePath, int damage, int speed, int xPos, int yPos) {
+		super(imagePath,damage,speed,xPos,yPos);
 		this.damage = damage;
 		this.speed = speed;
 		xMovement = 0;

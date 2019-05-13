@@ -13,7 +13,7 @@ public class Player extends MovingImage {
 	private double xMovement, yMovement;
 
 	public Player(int xPos, int yPos) {
-		super("assets/mongy.png",xPos,yPos,30,30);
+		super("assets/mongy.png",xPos,yPos,50,50);
 		xMovement = 0;
 		yMovement = 0;
 	}

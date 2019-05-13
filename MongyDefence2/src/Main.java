@@ -8,6 +8,7 @@
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.net.URL;
 
 import javax.swing.*;
 
@@ -16,12 +17,15 @@ public class Main extends JPanel implements KeyListener {
 	public static final int DRAWING_HEIGHT = 403;
 	private final Font FONT = new Font("ComicSans", Font.PLAIN, 20);
 	private Player mongy;
+	private Weapon banana;
+
 	private boolean upKeyPressed,downKeyPressed,leftKeyPressed,rightKeyPressed;
 
 	public Main() {
 		this.setFocusable(true);
 		addKeyListener(this);
 		mongy = new Player(360, 200);
+		banana = new Banana("assets/Banana.png", 400, 200, 50, 50);
 		
 	}
 
@@ -41,6 +45,8 @@ public class Main extends JPanel implements KeyListener {
 		g.drawLine(0, 27 * getHeight() / 32, getWidth(), 27 * getHeight() / 32);
 		
 		mongy.draw(g,this);
+		
+		banana.draw(g,this);
 	}
 	
 	@Override
@@ -137,6 +143,9 @@ public class Main extends JPanel implements KeyListener {
 		panel.setBackground(Color.PINK);
 		Container c = window.getContentPane();
 		c.add(panel);
+		
+	    ImageIcon img = new ImageIcon("assets/Icon.png");
+	    window.setIconImage(img.getImage());
 
 		window.setVisible(true);
 		
