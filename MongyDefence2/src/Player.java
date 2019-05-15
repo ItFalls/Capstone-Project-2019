@@ -35,7 +35,7 @@ public class Player extends MovingImage {
 		moveByAmount((int)xMovement, (int)yMovement);
 	}
 
-	public void shoot(){
+	public void shoot(int direction){
 
 	}
 }
