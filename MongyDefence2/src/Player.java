@@ -12,6 +12,8 @@ import javax.imageio.ImageIO;
 public class Player extends MovingImage {
 	private double xMovement, yMovement;
 
+
+
 	public Player(int xPos, int yPos) {
 		super("assets/mongy.png",xPos,yPos,50,50);
 		xMovement = 0;
@@ -32,10 +34,6 @@ public class Player extends MovingImage {
 	public void update() {
 		xMovement *= 0.9;
 		yMovement *= 0.9;
-		moveByAmount((int)xMovement, (int)yMovement);
-	}
-
-	public void shoot(int direction){
-
+		moveByAmount((int) xMovement, (int) yMovement);
 	}
 }

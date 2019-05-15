@@ -7,8 +7,7 @@
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
+import java.awt.event.*;
 
 public class Main extends JPanel implements KeyListener {
     private static final int DRAWING_WIDTH = 800;
@@ -28,7 +27,7 @@ public class Main extends JPanel implements KeyListener {
     private Main() {
         this.setFocusable(true);
         addKeyListener(this);
-        mongy = new Player(100, 200);
+        mongy = new Player(200, 200);
 
         banana = new Banana("assets/Banana.png", 400, 200, 50, 50);
         coconut = new Coconut("assets/Coconut.png", 500, 200, 50, 50);
@@ -74,8 +73,8 @@ public class Main extends JPanel implements KeyListener {
         mongy.draw(g, this);
 
         banana.draw(g, this);
-        coconut.draw(g, this);
-        poop.draw(g, this);
+        //coconut.draw(g, this);
+        //poop.draw(g, this);
 
         //bananaButton
         bananaButton.setBounds(50 * getWidth() / 800, 9 * getHeight() / 10, 2 * getWidth() / 8, 6 * getHeight() / 80);
@@ -146,19 +145,22 @@ public class Main extends JPanel implements KeyListener {
         //Shooting
         if (key == KeyEvent.VK_UP) {
             upKeyPressed = false;
+            System.out.println("upShoot");
         }
         if (key == KeyEvent.VK_LEFT) {
             leftKeyPressed = false;
+            System.out.println("leftShoot");
         }
         if (key == KeyEvent.VK_DOWN) {
             downKeyPressed = false;
+            System.out.println("downShoot");
         }
         if (key == KeyEvent.VK_RIGHT) {
             rightKeyPressed = false;
+            System.out.println("rightShoot");
         }
 
     }
-
 
 
     private void run() {
@@ -180,17 +182,19 @@ public class Main extends JPanel implements KeyListener {
 
 
             if (upKeyPressed) {
-                mongy.shoot(-1);
-            }
-            if (leftKeyPressed) {
-                mongy.shoot(1);
-            }
-            if (downKeyPressed) {
-                mongy.shoot(-1);
+                banana.shoot(1);
             }
             if (rightKeyPressed) {
-                mongy.shoot(1);
+                banana.shoot(2);
             }
+            if (downKeyPressed) {
+                banana.shoot(3);
+            }
+            if (leftKeyPressed) {
+                banana.shoot(4);
+            }
+
+
 
             mongy.update();
             checkPlayer();
