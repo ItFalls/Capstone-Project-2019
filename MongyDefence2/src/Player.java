@@ -34,4 +34,8 @@ public class Player extends MovingImage {
 		yMovement *= 0.9;
 		moveByAmount((int)xMovement, (int)yMovement);
 	}
+
+	public void shoot(){
+
+	}
 }
