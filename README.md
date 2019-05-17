@@ -9,7 +9,7 @@
     
     Anyone who wants to have a fun time with hilarious graphics should play this game. 
     
-    Out game features keyboard input, and a graphics window which the play can use to play. 
+    Our game features keyboard input, and a graphics window which the player can use to play. 
     
 # Instructions
 
@@ -18,11 +18,12 @@
     A - Move Left
     S - Move Down
     D - Move Right
-    [SPACE] - Shoot
+    [Mouse Click] - Shoot
     
 # Class List
 
     Main
+    MovingImage (Example)
     Player
     Enemy
     Weapon
