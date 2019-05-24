@@ -2,10 +2,12 @@
 
     Authors: Ethan Ling
              Kevin Chu
+             
+    Date:    5 / 38 / 2019
 
 # Introduction
 
-    Our program is a game where you play as a monkey destroying blocks with a multitude of weapons. 
+    Our program is a game where you play as a monkey destroying enemies with a multitude of weapons. 
     
     Anyone who wants to have a fun time with hilarious graphics should play this game. 
     
@@ -22,24 +24,26 @@
     
 # Class List
 
-    Main
-    MovingImage (Example)
-    Player
-    Enemy
-    Weapon
-    Banana
-    Coconut
-    Poop
+    . Banana        - The subclass of Weapon
+    . Coconut       - The subclass of Weapon
+    . Enemy         - Represents the entity the player must destroy
+    . Main          - Where all the graphics are created
+    . MovingImage   - Helps with movement and animations
+    . Player        - Represents the entity the player controls
+    . Poop          - The subclass of Weapon
+    . SplashScreen  - Represnts the splash screen shown at launch
+    . Weapon        - Represnst the weapons the player uses 
+
+   
+    
     
 # Responsibilities
 
-    Ethan   . Weapon
-            . Banana
-            . Coconut
-            . Poop
+    Ethan   . Enemies
+            . Collision
+            . Presentation
             . README
             . UML Diagram
             
-    Kevin   . Player
-            . Enemy
-            . Main
+    Kevin   . Player Movement
+            . Projectiles
