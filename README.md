@@ -47,3 +47,17 @@
             
     Kevin   . Player Movement
             . Projectiles
+            
+# Credits
+    - Class Example: Moving Image
+    - Java API
+        - Splashscreen   
+    
+# Bugs 
+    Player may randomly get stuck near the corners
+
+
+
+
+
+
