@@ -31,8 +31,8 @@
     . MovingImage   - Helps with movement and animations
     . Player        - Represents the entity the player controls
     . Poop          - The subclass of Weapon
-    . SplashScreen  - Represnts the splash screen shown at launch
-    . Weapon        - Represnst the weapons the player uses 
+    . SplashScreen  - Represents the splash screen shown at launch
+    . Weapon        - Represents the weapons the player uses 
 
    
     
